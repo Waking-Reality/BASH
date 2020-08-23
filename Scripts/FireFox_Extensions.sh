@@ -43,11 +43,6 @@ echo -e '\e[1;31m'"{::\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\::}"'\e[0m'
 echo -e '\e[1;31;43m'"DO NOT TOUCH MOUSE OR KEYBOARD DURING INSTALL!!!!"'\e[0m'
 echo -e '\e[1;31m'"{::\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\::}"'\e[0m'
 
-# Disable FireFox's "Warning on Close"
-
-sed -i 's/user_pref("browser.tabs.warnOnClose", true);/user_pref("browser.tabs.warnOnClose", false);/g' /home/*/.mozilla/firefox/*-esr/prefs.js 2>/dev/null &
-wait
-
 # Cookie-Editor
 
 if [ -e $CookieEditor ]
